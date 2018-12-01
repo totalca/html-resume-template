@@ -7,15 +7,45 @@ html(lang="en")
     link(rel="stylesheet", href="style.css")
     title PUG Fun
   body
-    #stars
-    #stars2
-    #stars3
-    #container
-      nav
-        .menu
-          .menu__item
-            span.icon-wondering
-            a(href='#') About
-          .menu__item
-            span.icon-hammer
-            a(href='#') Portfolio
+   -
+    var socialIcons = [
+      {
+        "icon": "facebook2",
+        "url": "https://facebook.com/nicolaetotalca"
+      },
+      {
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/nicolaetotalca/"
+      },
+      {
+        "icon": "github",
+        "url": "https://github.com/totalca"
+      },
+      {
+        "icon": "new-tab",
+        "url": "https://nicolaetotalca.com"
+      }
+    ]
+
+  #stars
+  #stars2
+  #stars3
+  #container
+    nav
+      .menu
+        .menu__item
+          span.icon-wondering
+          a(href='#') About
+        .menu__item
+          span.icon-hammer
+          a(href='#') Portfolio
+    .avatar
+      img(src='asset/image/avatar.jpg')
+    h1 Nicolae Totalca
+    ul.social__icons
+      each social, key in socialIcons
+        li.social__item
+          label.social__label(for=`message-box-id-${key}`)
+          a.social__box-link(href=social.url, target="_blank")
+            span(class=`icon-${social.icon}`)
+            

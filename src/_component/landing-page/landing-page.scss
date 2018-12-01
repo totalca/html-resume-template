@@ -22,15 +22,15 @@ html {
 
 #container {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 0;
   right: 0;
   color: #FFF;
   text-align: center;
   font-weight: 300;
-  font-size: 50px;
-  letter-spacing: 10px;
-  margin-top: -60px;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin-top: -35px;
   padding-left: 10px;
   h1 {
     background: -webkit-linear-gradient(white, #38495a);
@@ -65,11 +65,64 @@ nav .menu__item {
 }
 
 nav a {
-  color: #FFF;
+  color: #fff;
+  letter-spacing: 0;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: #FFF;
+  color: #fff;
   text-decoration: underline;
+}
+
+.avatar {
+	width: 10rem;
+	height: 10rem;
+	box-sizing: border-box;
+	border: 2px #ccc solid;
+	border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem auto;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.social__icons {
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.social__label {
+  color: #fff;
+  padding: 0.1rem 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.social__box-link {
+  font-size: 2.2rem;
+  color: #ccc;
+  white-space: nowrap;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
