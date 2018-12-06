@@ -5,25 +5,25 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="style.css")
-    title PUG Fun
+    title One Page Website
   body
    -
     var socialIcons = [
       {
         "icon": "facebook2",
-        "url": "https://facebook.com/nicolaetotalca"
+        "url": "#"
       },
       {
         "icon": "linkedin",
-        "url": "https://www.linkedin.com/in/nicolaetotalca/"
+        "url": "#"
       },
       {
         "icon": "github",
-        "url": "https://github.com/totalca"
+        "url": "#"
       },
       {
         "icon": "new-tab",
-        "url": "https://nicolaetotalca.com"
+        "url": "#"
       }
     ]
 
@@ -34,18 +34,20 @@ html(lang="en")
     nav
       .menu
         .menu__item
-          span.icon-wondering
+          //- span.icon-wondering
           a(href='#') About
         .menu__item
-          span.icon-hammer
+          //- span.icon-hammer
           a(href='#') Portfolio
     .avatar
-      img(src='asset/image/avatar.jpg')
-    h1 Nicolae Totalca
+      //- img(src='asset/image/avatar.jpeg')
+    h1 Hello, I'm Developer!
     ul.social__icons
       each social, key in socialIcons
         li.social__item
           label.social__label(for=`message-box-id-${key}`)
           a.social__box-link(href=social.url, target="_blank")
             span(class=`icon-${social.icon}`)
-            
+    .scroll__next
+      a.social__box-link(href='#')
+        span.icon-circle-down

@@ -29,12 +29,12 @@ html {
   text-align: center;
   font-weight: 300;
   font-size: 40px;
-  letter-spacing: 5px;
   margin-top: -35px;
   padding-left: 10px;
   h1 {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
+    font-family: 'Reem Kufi', sans-serif;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -42,6 +42,7 @@ html {
 nav {
   position: fixed;
   top: 0;
+  color: #fff;
   width: 100%;
   height: 3rem;
   display: flex;
@@ -79,14 +80,20 @@ nav a:hover {
 	width: 10rem;
 	height: 10rem;
 	box-sizing: border-box;
-	border: 2px #ccc solid;
+	border: 2px #fff solid;
 	border-radius: 50%;
   overflow: hidden;
   margin: 1rem auto;
-	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(asset/image/avatar.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: inherit;
+  background-repeat: no-repeat;
+  position: relative;
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
-	img { width: 100%; height: auto; }
+	img { width: 100%; height: inherit; opacity: 1; }
 }
 
 @keyframes float {
@@ -119,10 +126,36 @@ nav a:hover {
 
 .social__box-link {
   font-size: 2.2rem;
-  color: #ccc;
+  color: #fff;
   white-space: nowrap;
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
+}
+
+.social__box-link:hover {
+	animation: bounce 1s;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.scroll__next {
+  animation: bounce 2s infinite;
+  margin: 130px;
 }
